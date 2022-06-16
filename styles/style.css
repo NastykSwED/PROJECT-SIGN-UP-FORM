@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root{
+    --white:#fff;
+    --black:#000;
+    --black-alpha:rgb(0,0,0,0.8);
+    --pink:rgb(208,69,255);
+    --purple:rgb(115,68,246);
+
+    --font-family:'Outfit', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--white);
+    font-family: var(--font-family);
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--black);
+}
+
+.hero-sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.drop{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    backdrop-filter: blur(3px);
+}
+
+
+.sidebar-logo img{
+    width: 8rem;
+    height: auto;
+    
+}
+
+.sidebar-title{
+    font-weight: 700;
+    text-shadow: 2px 2px 2px var(--black);
+}
+
+
+.form-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45vw;
+    margin-left: 4rem;
+}
+
+.form-section-text h3,p{
+    margin-bottom: 1.5rem;
+}
+
+.form-section-text h2,h3{
+   font-size: 1.5rem;
+}
+
+.form-section-text h3{
+    font-style: italic;
+}
+
+.form-section-text p{
+   font-size: 1.4rem;
+}
+
+
+
+.form-section-container p{
+    font-size: 1.4rem;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.form-subgroup{
+    position: relative;
+}
+
+.form-subgroup label{
+    display: block;
+    position: absolute;
+    left: 0.8rem;
+    top: 0.2rem;
+    color:var(--black-alpha);
+    font-size: 0.80rem;
+    font-weight: 600;
+}
+
+.form-subgroup input{
+    width: 90%;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.7rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.1rem;
+    color: var(--black);
+    transition:0.3s;
+}
+
+.form-subgroup input:focus{
+    outline: none;
+    box-shadow: inset 0 -4px 0px var(--pink);
+}
+
+.form-btn{
+    margin-top: 0.8rem;
+}
+
+.form-btn button{
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    background-color: var(--pink);
+    border: none;
+    border-radius: 2.5rem;
+    padding: 1.25rem 3.5rem;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+.form-btn button:hover{
+    background-color: var(--purple);
+}
+
+.log-in-container{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.log-in-btn a{
+    text-decoration: none;
+    color: var(--pink);
+    transition: 0.4s;
+}
+
+.log-in-btn a:hover{
+    color: var(--purple);
+}
+
+@media screen and (max-width:580px) {
+    body{
+        flex-direction: column;
+    }
+
+    .hero-sidebar{
+        width: 100vw;
+        padding: 1.5rem 0rem;
+    }
+
+    .sidebar-logo img{
+        width: 6rem;
+    }
+
+
+    .form-section{
+        width: 100%;
+        padding: 2rem;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .form-section-text{
+        text-align: center;
+    }
+
+
+    .form-section-text h2{
+        margin-bottom: 0.5rem;
+    }
+
+    .form-section-text h2,h3{
+        font-size: 1.2rem;
+    }
+
+    .form-section-text p{
+        font-size: 1.3rem;
+    }
+
+    .form-section-container{
+        text-align:center;
+        width: 90%;
+    }
+
+    .form-section-container p{
+        font-size: 1.3rem;
+    }
+
+    .form{
+        grid-template-columns: 1fr;
+    }
+
+   
+    .form-subgroup input{
+        width: 100%;
+    }
+}
+
+
+
+
+@media screen and (max-width:1035px){
+    .hero-sidebar{
+        width: 100vw;
+    }
+
+    .sidebar-logo img{
+        width: 6rem;
+    }
+
+
+    .form-section{
+        width: 100%;
+        padding: 1.2rem 1.5rem 0.7rem;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .form-section-text{
+        text-align: center;
+    }
+
+    .form-section-text h2{
+        margin-bottom: 0.5rem;
+    }
+
+    .form-section-text h2,h3{
+        font-size: 1.1rem;
+    }
+
+    .form-section-text h3,p{
+        margin-bottom: 0.8rem;
+    }
+
+    .form-section-text p{
+        font-size: 1.2rem;
+    }
+
+    .form-section-container{
+        text-align:center;
+        width: 90%;
+    }
+
+    .form-section-container p{
+        font-size: 1.2rem;
+    }
+
+    .form{
+        grid-template-columns: 1fr;
+    }
+
+    .form-subgroup input{
+        width: 100%;
+    }
+
+    .form-btn{
+        margin-top: 1.5rem;
+    }
+}
